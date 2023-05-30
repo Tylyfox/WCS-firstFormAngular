@@ -3,7 +3,7 @@
     <form #registrationForm="ngForm" (ngSubmit)="registrationForm.valid && onSubmit()">
       <h2>Registration form</h2>
       <fieldset>
-        <input type="text" name="firstname" id="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required minlength="5" maxlength="15">
+        <input type="text" name="firstname" id="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required minlength="3" maxlength="15">
         <span>Firstname</span>
         <i></i>
         <div *ngIf="firstname.errors && registrationForm.submitted" class="error">
@@ -13,7 +13,7 @@
         </div>
       </fieldset>
       <fieldset>
-        <input type="text" name="lastname" id="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required minlength="5" maxlength="15">
+        <input type="text" name="lastname" id="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required minlength="3" maxlength="15">
         <span>Lastname</span>
         <i></i>
         <div *ngIf="lastname.errors && registrationForm.submitted" class="error">
